@@ -14,14 +14,18 @@
 
         <p class="about-desc">
           참신함은 본질을 추구 하는 것으로부터 나옵니다.
-          <br />다름은 브랜드의
-          본질을 이해함으로 시작합니다.
-          <br />빠르게 진화하는 기술, 소비자,
-          트렌드를 연구하고 통찰하여
-          <br />당신에게 명확한 길을 제시합니다.
+          <br />다름은 브랜드의 본질을 이해함으로 시작합니다. <br />빠르게
+          진화하는 기술, 소비자, 트렌드를 연구하고 통찰하여 <br />당신에게
+          명확한 길을 제시합니다.
         </p>
-        <p class="about-green">다름과 함께 소통하며 가치 있는 브랜드를 경험해보세요.</p>
-        <a @click="scrollToService()" class="btn-arrow-down" title="남다른 서비스">
+        <p class="about-green">
+          다름과 함께 소통하며 가치 있는 브랜드를 경험해보세요.
+        </p>
+        <a
+          @click="scrollToService()"
+          class="btn-arrow-down"
+          title="남다른 서비스"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="47"
@@ -29,7 +33,9 @@
             viewBox="0 0 47 23"
             class="injected-svg inject-svg green-arrow"
           >
-            <path d="M47 0L24.52 22.52 25 23h-3l.48-.48L0 0h2.04L23.5 21.5 44.96 0H47z" />
+            <path
+              d="M47 0L24.52 22.52 25 23h-3l.48-.48L0 0h2.04L23.5 21.5 44.96 0H47z"
+            />
           </svg>
         </a>
       </div>
@@ -39,12 +45,13 @@
         <h2>남다른서비스</h2>
         <p class="about-desc">
           각 부문의 전문가들의 실무경험을 바탕으로
-          <br />온라인 기반의 시스템
-          통합 구축 사업에 최적화된 Total DX Service를 제공합니다.
-          <br />우리는
-          브랜드의 가능성을 발견하고 그것을 현실화합니다.
+          <br />온라인 기반의 시스템 통합 구축 사업에 최적화된 Total DX
+          Service를 제공합니다. <br />우리는 브랜드의 가능성을 발견하고 그것을
+          현실화합니다.
         </p>
-        <p class="about-green">가치있는 브랜드를 만드는 것. 우리는 이미 그 답을 알고 있습니다.</p>
+        <p class="about-green">
+          가치있는 브랜드를 만드는 것. 우리는 이미 그 답을 알고 있습니다.
+        </p>
         <ul class="service-list">
           <li class="strategy">
             Strategy
@@ -93,7 +100,9 @@
             viewBox="0 0 47 23"
             class="injected-svg inject-svg green-arrow"
           >
-            <path d="M47 0L24.52 22.52 25 23h-3l.48-.48L0 0h2.04L23.5 21.5 44.96 0H47z" />
+            <path
+              d="M47 0L24.52 22.52 25 23h-3l.48-.48L0 0h2.04L23.5 21.5 44.96 0H47z"
+            />
           </svg>
         </a>
       </div>
@@ -110,7 +119,7 @@
             v-for="(item, i) in sortingMember"
             :key="`list-${i}`"
             :class="item.classColor"
-            :style="{backgroundImage:'url('+item.characterImage+')'}"
+            :style="{ backgroundImage: 'url(' + item.characterImage + ')' }"
           >
             <span class="membersName">
               <span v-html="item.memberName" />
@@ -132,11 +141,11 @@ import confirmModal from "../../components/confirmModal.vue";
 
 export default {
   components: {
-    confirmModal
+    confirmModal,
   },
   data() {
     return {
-      modal: false
+      modal: false,
     };
   },
   mounted() {
@@ -151,8 +160,8 @@ export default {
   },
   computed: {
     ...mapGetters({
-      sortingMember: "about/sortingMember"
-    })
+      sortingMember: "about/sortingMember",
+    }),
   },
   methods: {
     sideMenuClose() {
@@ -175,22 +184,6 @@ export default {
     },
     moveToMembers() {
       $.fn.fullpage.moveTo("darumMembers");
-    },
-    btnToggle() {
-      if (!$(".btn-gnb").hasClass("active")) {
-        $(".gnb-wrap").show();
-        $(".btn-gnb").addClass("active");
-        $(".gnb-wrap")
-          .stop()
-          .animate({ right: "0" }, 600);
-      } else {
-        $(".btn-gnb").removeClass("active");
-        $(".gnb-wrap")
-          .stop()
-          .animate({ right: "-50%" }, 500, function() {
-            $(".gnb-wrap").hide();
-          });
-      }
     },
     aboutJquery() {
       // 의뢰하기 팝업 오픈
@@ -282,7 +275,7 @@ export default {
           TweenMax.to(".request-open span", 0.5, {
             x: "10",
             repeat: -1,
-            yoyo: true
+            yoyo: true,
           });
         },
         function() {
@@ -317,7 +310,7 @@ export default {
           .stop()
           .slideToggle("fast");
       });
-    }
+    },
   },
   metaInfo: {
     script: [
@@ -327,23 +320,22 @@ export default {
           "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/scrolloverflow.min.js",
 
         async: true,
-        defer: true
+        defer: true,
       },
       {
         src:
           "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js",
         async: true,
-        defer: true
+        defer: true,
       },
       {
         src: "../../assets/js/lib-pc.js",
         async: true,
-        defer: true
-      }
-    ]
-  }
+        defer: true,
+      },
+    ],
+  },
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

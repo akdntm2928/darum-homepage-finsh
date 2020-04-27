@@ -20,9 +20,7 @@
         >
           <path d="M199.88 200.969L129.811 271v-70.031H0V0h200v200.969h-.12z" />
         </svg>
-        <path
-          d="M199.88 200.969L129.811 271v-70.031H0V0h200v200.969h-.12z"
-        ></path>
+        <path d="M199.88 200.969L129.811 271v-70.031H0V0h200v200.969h-.12z"></path>
         <h2>
           <span class="port-title">경험</span>
         </h2>
@@ -43,9 +41,7 @@
           viewBox="0 0 47 23"
           class="injected-svg inject-svg white-arrow"
         >
-          <path
-            d="M47 0L24.52 22.52 25 23h-3l.48-.48L0 0h2.04L23.5 21.5 44.96 0H47z"
-          />
+          <path d="M47 0L24.52 22.52 25 23h-3l.48-.48L0 0h2.04L23.5 21.5 44.96 0H47z" />
         </svg>
       </a>
     </div>
@@ -76,11 +72,7 @@
       <!-- 스몰사이즈 포트폴리오 시작-->
       <!-- 여기는 v-if만 걸도록 한다. 한꺼번에 전부 불러온다.-->
       <ul class="port-list-more" v-if="smallListToggle == true">
-        <li
-          v-for="(item, i) in smallData"
-          :key="`list-${i}`"
-          :class="item.className"
-        >
+        <li v-for="(item, i) in smallData" :key="`list-${i}`" :class="item.className">
           <a href="#none" :data-target="item.target">
             <div>
               <p class="port-cover-title-more">
@@ -97,10 +89,7 @@
       <button class="btn-more" @click="showMore()" v-show="btnHide == false">
         더보기
         <span>
-          <img
-            src="../../assets/images/pc/btn/btn-more.svg"
-            class="btn-more-bg"
-          />
+          <img src="../../assets/images/pc/btn/btn-more.svg" class="btn-more-bg" />
         </span>
       </button>
 
@@ -133,12 +122,12 @@
         v-on:nextId="toNext"
         v-on:list="restoreCss"
       />
-      <renewal12Compo
+      <!-- <renewal12Compo
         v-if="renewalName == 'renewal12'"
         v-on:prevId="toPrev"
         v-on:nextId="toNext"
         v-on:list="restoreCss"
-      />
+      />-->
       <renewal11Compo
         v-if="renewalName == 'renewal11'"
         v-on:prevId="toPrev"
@@ -284,7 +273,6 @@
 <script>
 import $ from "jquery";
 import renewal13Compo from "@/components/portfolio/renewal13.vue";
-import renewal12Compo from "@/components/portfolio/renewal12.vue";
 import renewal11Compo from "@/components/portfolio/renewal11.vue";
 import renewal10Compo from "@/components/portfolio/renewal10.vue";
 import renewal09Compo from "@/components/portfolio/renewal09.vue";
@@ -318,7 +306,6 @@ export default {
     confirmModal,
     "port-popup": portPopup,
     renewal13Compo,
-    renewal12Compo,
     renewal11Compo,
     renewal10Compo,
     renewal10Compo,
@@ -342,7 +329,7 @@ export default {
     "port-middleeast-compo": portMiddleeastCompo,
     "port-hyosung-compo": portHyosungCompo,
     "port-samsungpop-compo": portSamsungpopCompo,
-    "port-tworld-compo": portTworldCompo,
+    "port-tworld-compo": portTworldCompo
   },
   data() {
     return {
@@ -357,7 +344,6 @@ export default {
       toName: "",
       nameArray: [
         "renewal13",
-        "renewal12",
         "renewal11",
         "renewal10",
         "renewal09",
@@ -380,8 +366,8 @@ export default {
         "port-middleeast",
         "port-hyosung",
         "port-samsungpop",
-        "port-tworld",
-      ],
+        "port-tworld"
+      ]
     };
   },
   beforeMount() {
@@ -404,31 +390,32 @@ export default {
     },
     stateOriginNumber() {
       this.togglePrev;
-    },
+    }
   },
   computed: {
     ...mapState({
-      portFolioList: (state) => state.portfolio.list,
-      confirmLastLarge: (state) => state.portfolio.confirmLastLarge,
-      smallData: (state) => state.portfolio.smallList,
-      toggleSmallList: (state) => state.portfolio.toggleSmallList,
-      stateRenewalNumber: (state) => state.portfolio.renewalNumber,
-      stateOriginNumber: (state) => state.portfolio.originNumber,
+      portFolioList: state => state.portfolio.list,
+      confirmLastLarge: state => state.portfolio.confirmLastLarge,
+      smallData: state => state.portfolio.smallList,
+      toggleSmallList: state => state.portfolio.toggleSmallList,
+      stateRenewalNumber: state => state.portfolio.renewalNumber,
+      stateOriginNumber: state => state.portfolio.originNumber
     }),
     ...mapGetters({
       initData: "portfolio/initData",
       moreData: "portfolio/moreData",
       totalPorts: "portfolio/totalPorts",
       detailPorts: "portfolio/detailPorts",
-      togglePrev: "portfolio/togglePrev",
-    }),
+      togglePrev: "portfolio/togglePrev"
+    })
   },
   methods: {
     ...mapMutations({
+      fetch_list: "portfolio/fetch_list",
       setMoreData: "portfolio/setMoreData",
       setRenewalNumber: "portfolio/setRenewalNumber",
       setOriginNumber: "portfolio/setOriginNumber",
-      setCloseHeaderBtn: "common/setCloseHeaderBtn",
+      setCloseHeaderBtn: "common/setCloseHeaderBtn"
     }),
     openModal() {
       this.modal = true;
@@ -478,7 +465,7 @@ export default {
       }
     },
     toPrev(id) {
-      const findIndexNumber = (e) => e == id;
+      const findIndexNumber = e => e == id;
       let v = this.nameArray.findIndex(findIndexNumber);
       if (this.nameArray[v + 1]) {
         this.renewalName = this.nameArray[v + 1];
@@ -489,7 +476,7 @@ export default {
       }
     },
     toNext(id) {
-      const findIndexNumber = (e) => e == id;
+      const findIndexNumber = e => e == id;
       let v = this.nameArray.findIndex(findIndexNumber);
       if (this.nameArray[v - 1]) {
         this.renewalName = this.nameArray[v - 1];
@@ -582,7 +569,7 @@ export default {
           TweenMax.to(".request-open span", 0.5, {
             x: "10",
             repeat: -1,
-            yoyo: true,
+            yoyo: true
           });
         },
         function() {
@@ -609,8 +596,8 @@ export default {
           TweenMax.to(".next span", 0.5, { x: "0" });
         }
       );
-    },
-  },
+    }
+  }
 };
 </script>
 <!-- <link rel="stylesheet" href="../../assets/css/jeh-pc-style.css" /> -->

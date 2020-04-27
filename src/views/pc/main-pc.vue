@@ -13,15 +13,15 @@
               playsinline=""
               autoplay=""
               muted=""
-            > -->
+            >-->
             <video
               id="myVideo"
               @ended="swNext()"
               preload
               class="bg-video"
-              playsinline=""
-              autoplay=""
-              muted=""
+              playsinline
+              autoplay
+              muted
             >
               <source
                 src="../../../src/assets/images/darum-bg-movie.mp4"
@@ -91,23 +91,27 @@
               swiper-animate-effect="fadeInLeft"
               swiper-animate-duration="0.5s"
               swiper-animate-delay="0.4s"
-              ><img
+            >
+              <img
                 src="../../../src/assets/images/pc/bg/bg-main-01.svg"
                 width="198"
                 height="113"
-                alt=""
-            /></span>
+                alt
+              />
+            </span>
             <span
               class="main-second-bg main-second-bg02 ani"
               swiper-animate-effect="fadeInUp"
               swiper-animate-duration="0.5s"
               swiper-animate-delay="0.4s"
-              ><img
+            >
+              <img
                 src="../../../src/assets/images/pc/bg/bg-main-02.svg"
                 width="198"
                 height="71"
-                alt=""
-            /></span>
+                alt
+              />
+            </span>
             <div
               class="second-text-wrap ani"
               swiper-animate-effect="fadeInUp"
@@ -115,15 +119,24 @@
               swiper-animate-delay="0.2s"
             >
               <p class="slogan-text-7">
-                <span>다</span><span>름</span><span>과</span>
+                <span>다</span>
+                <span>름</span>
+                <span>과</span>
               </p>
               <p class="slogan-text-8">
-                <span>함</span><span>께</span><span>다</span><span>르</span
-                ><span>게</span>
+                <span>함</span>
+                <span>께</span>
+                <span>다</span>
+                <span>르</span>
+                <span>게</span>
               </p>
               <p class="slogan-text-9">
-                <span>커</span><span>뮤</span><span>니</span><span>케</span
-                ><span>이</span><span>션</span>
+                <span>커</span>
+                <span>뮤</span>
+                <span>니</span>
+                <span>케</span>
+                <span>이</span>
+                <span>션</span>
               </p>
             </div>
             <div class="main-second-menu">
@@ -154,8 +167,9 @@
                 swiper-animate-effect="fadeInUp"
                 swiper-animate-duration="0.5s"
                 swiper-animate-delay="0.5s"
-                ><img src="../../../src/assets/images/pc/img_reg.png" alt=""
-              /></span>
+              >
+                <img src="../../../src/assets/images/pc/img_reg.png" alt />
+              </span>
             </div>
           </div>
           <div class="bg_canvas"></div>
@@ -316,6 +330,8 @@ export default {
     this.initCanvas();
     this._swiper();
     this.jqueryCodes();
+    console.log("main 들어옴");
+    // this.$router.push("/portfolio");
   },
   updated() {
     this.jqueryCodes();

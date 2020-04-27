@@ -10,6 +10,7 @@ Vue.config.productionTip = false;
 
 Vue.use(Meta);
 Vue.use(browserDetect);
+// global 변수 선언
 
 const vm = new Vue({
   router,

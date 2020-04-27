@@ -11,22 +11,19 @@
 import darumHeader from "@/components/darum-header.vue";
 export default {
   components: {
-    "darum-header": darumHeader
+    "darum-header": darumHeader,
   },
-  mounted(){
-
-
-  },
+  mounted() {},
   computed: {
     hideHeader() {
       return this.$route.meta.hideHeader;
-    }
+    },
   },
   data() {
     return {};
   },
   mounted() {},
-  methods: {}
+  methods: {},
 };
 </script>
 

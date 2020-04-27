@@ -16,9 +16,8 @@ const PcContact = () =>
 const MobileMain = () =>
   import(/* webpackChunkName: "mobile" */ "./views/mobile/main-mobile.vue");
 
-
 export default new Router({
-  mode: "history",
+  // mode: "history",
   base: process.env.BASE_URL,
   routes: [
     {
@@ -33,6 +32,21 @@ export default new Router({
     },
     {
       path: "/about",
+      name: "PcAbout",
+      component: PcAbout,
+    },
+    {
+      path: "/darumIs",
+      name: "PcAbout",
+      component: PcAbout,
+    },
+    {
+      path: "/darumService",
+      name: "PcAbout",
+      component: PcAbout,
+    },
+    {
+      path: "/darumMembers",
       name: "PcAbout",
       component: PcAbout,
     },

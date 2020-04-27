@@ -160,7 +160,6 @@
 
 <script>
 import renewal13Compo from "@/components/portfolio/renewal13.vue";
-import renewal12Compo from "@/components/portfolio/renewal12.vue";
 import renewal11Compo from "@/components/portfolio/renewal11.vue";
 import renewal10Compo from "@/components/portfolio/renewal10.vue";
 import renewal09Compo from "@/components/portfolio/renewal09.vue";
@@ -188,7 +187,6 @@ import { mapState } from "vuex";
 export default {
   components: {
     renewal13Compo,
-    renewal12Compo,
     renewal11Compo,
     renewal10Compo,
     renewal10Compo,

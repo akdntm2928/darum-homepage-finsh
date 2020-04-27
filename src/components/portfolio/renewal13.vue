@@ -12,9 +12,6 @@
         href="#renewal13-start"
         class="btn-arrow-down smooth"
         title="내용 보기"
-        v-scroll-to="{
-          element: '#renewal13-start',
-        }"
         @click.prevent="moveToContent($event)"
       >
         <svg
@@ -126,7 +123,7 @@ export default {
       pageId: "renewal13",
     };
   },
-  mounted(){
+  mounted() {
     $(".pop-portfolio").scrollTop(0, 0);
   },
   methods: {

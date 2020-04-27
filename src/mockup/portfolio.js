@@ -1,11 +1,5 @@
-// initial state
-//각각의 포트폴리오 값들을 이곳에 넣는다.
-//DB를 쓰듯이 state를 이용하고
-//화면으로 뿌리는 것은 getter에서 연산을 통하도록 한다.
-import { listTest } from "../../mockup/portfolio";
-
-const state = {
-  list: [
+export default {
+  listtest: [
     {
       renewalNumber: "renewal13",
       target: "renewal13",
@@ -13,13 +7,13 @@ const state = {
       ment2: "라온시큐어 리뉴얼",
       ment3: "UI / UX DESIGN, DEVELOP",
     },
-    // {
-    //   renewalNumber: "renewal12",
-    //   target: "renewal12",
-    //   ment1: `기업의 사회적 책임을 <br/> 실천하고 세상의 지속 가능한 <br/> 발전을 지향합니다.`,
-    //   ment2: "성주재단 리뉴얼",
-    //   ment3: "UI / UX DESIGN, DEVELOP",
-    // },
+    {
+      renewalNumber: "renewal12",
+      target: "renewal12",
+      ment1: `기업의 사회적 책임을 <br/> 실천하고 세상의 지속 가능한 <br/> 발전을 지향합니다.`,
+      ment2: "성주재단 리뉴얼",
+      ment3: "UI / UX DESIGN, DEVELOP",
+    },
     {
       renewalNumber: "renewal11",
       target: "renewal11",
@@ -38,7 +32,7 @@ const state = {
       renewalNumber: "renewal09",
       target: "renewal09",
       ment1: `선불요금제 가입회원대상 <br />간편한 충전 수단을
-              <br />제공합니다.`,
+          <br />제공합니다.`,
       ment2: "LG U+ 알뜰모바일 선불충전 APP",
       ment3: "UI / UX DESIGN",
     },
@@ -46,7 +40,7 @@ const state = {
       renewalNumber: "renewal08",
       target: "renewal08",
       ment1: `슈프리마의 브랜드 가치를 <br />세계로 전할 수 있는 <br />글로벌
-              파트너 사이트입니다.`,
+          파트너 사이트입니다.`,
       ment2: "슈프리마 Microwebsite SGPP 2019",
       ment3: "UI / UX DESIGN, DEVELOP",
     },
@@ -89,7 +83,7 @@ const state = {
       renewalNumber: "renewal02",
       target: "renewal02",
       ment1: `택배 서비스 부문 <br />
-              2년 연속 1위`,
+          2년 연속 1위`,
       ment2: "로젠택배 대표 홈페이지 개편",
       ment3: "UI / UX DESIGN",
     },
@@ -97,7 +91,7 @@ const state = {
       renewalNumber: "renewal01",
       target: "renewal01",
       ment1: `뛰어난 품질에 기반한 <br />
-              프리미엄 브랜드`,
+          프리미엄 브랜드`,
       ment2: "슈프리마 웹사이트 리뉴얼",
       ment3: "UI / UX DESIGN, DEVELOP",
     },
@@ -105,8 +99,8 @@ const state = {
       renewalNumber: "port-keit",
       target: "keit",
       ment1: `대한민국 기술의 <br />
-              프리미엄 시대 - <br />
-              KEIT가 열어갑니다.`,
+          프리미엄 시대 - <br />
+          KEIT가 열어갑니다.`,
       ment2: "한국기술평가관리원 리뉴얼",
       ment3: "UI / UX DESIGN, DEVELOP",
     },
@@ -114,7 +108,7 @@ const state = {
       renewalNumber: "port-teachinghub",
       target: "teachinghub",
       ment1: `티칭허브가 <br />
-              미래교실을 빛냅니다.`,
+          미래교실을 빛냅니다.`,
       ment2: "금성출판사 티칭허브 리뉴얼",
       ment3: "UI / UX DESIGN",
     },
@@ -122,7 +116,7 @@ const state = {
       renewalNumber: "port-koreacorp",
       target: "koreacorp",
       ment1: `차세대 <br />
-              어드민 시스템 구축`,
+          어드민 시스템 구축`,
       ment2: "한국코퍼레이션",
       ment3: "UI / UX DESIGN",
     },
@@ -130,8 +124,8 @@ const state = {
       renewalNumber: "port-mykids",
       target: "mykids",
       ment1: `삼성화재 마이키즈로 <br />
-              우리아이의 <br />
-              미래를 설계하세요.`,
+          우리아이의 <br />
+          미래를 설계하세요.`,
       ment2: "삼성화재 마이키즈 컨설팅 앱",
       ment3: "UI / UX DESIGN",
     },
@@ -139,7 +133,7 @@ const state = {
       renewalNumber: "port-nugu",
       target: "nugu",
       ment1: `국내최초 지능형 <br />
-              음성인식 디바이스`,
+          음성인식 디바이스`,
       ment2: "SKT NUGU 프로모션 사이트 구축",
       ment3: "UI / UX DESIGN",
     },
@@ -147,8 +141,8 @@ const state = {
       renewalNumber: "port-purunet",
       target: "purunet",
       ment1: `언제, 어디에서나 <br />
-              온라인 교과 공부는 <br />
-              푸르넷`,
+          온라인 교과 공부는 <br />
+          푸르넷`,
       ment2: "금성출판사 푸르넷 리뉴얼",
       ment3: "UI / UX DESIGN",
     },
@@ -194,10 +188,10 @@ const state = {
       ment2: "SKT T월드 다이렉트샵 웹/모바일 운영",
       ment3: "UI / UX DESIGN",
     },
-    // {
-    //   renewalNumber: "renewal00",
-    //   innerValue: "다름과 함께 다르게 커뮤니케이션",
-    // },
+    {
+      renewalNumber: "renewal00",
+      innerValue: "다름과 함께 다르게 커뮤니케이션",
+    },
   ],
   smallList: [
     {
@@ -210,7 +204,7 @@ const state = {
       className: "port-khidi",
       target: "khidi",
       ment1: `한국보건산업진흥원
-              <br />중동환자 관리 시스템 운영`,
+          <br />중동환자 관리 시스템 운영`,
       ment2: "MAINTENANCE",
     },
     {
@@ -247,7 +241,7 @@ const state = {
       className: "port-sinhyup",
       target: "port-sinhyup",
       ment1: `신협중앙회 모바일뱅킹
-              <br />APP 재구축`,
+          <br />APP 재구축`,
       ment2: "UI / UX DESIGN",
     },
     {
@@ -260,14 +254,14 @@ const state = {
       className: "port-11st",
       target: "11st",
       ment1: `11번가 브랜드
-              <br />PC웹 MOBILE웹 신규 구축`,
+          <br />PC웹 MOBILE웹 신규 구축`,
       ment2: "UI / UX DESIGN",
     },
     {
       className: "port-highway",
       target: "highway",
       ment1: `서울고속도로(하이패스)
-              <br />실시간 과금시스템 구축`,
+          <br />실시간 과금시스템 구축`,
       ment2: "UI / UX DESIGN",
     },
     {
@@ -277,129 +271,4 @@ const state = {
       ment2: "UI / UX DESIGN",
     },
   ],
-  portsPopupList: [
-    {
-      id: "renewal13",
-      title: `Raonsecure
-      <br />wesite renewal`,
-      viewSub: "라온시큐어 리뉴얼",
-      firstImg: `../assets/images/pc/btn/btn-arrow-down.svg`,
-      infoboxText: `메인에 페럴랙스 스크롤을 사용하여 내용을 직관적이고 효과적으로
-      전달할 수있도록 구성하였습니다.
-      <br />
-      <br />또한 브랜드 아이덴티티를 강화한 디자인 개선과
-      보안솔루션에 특화된 제품 및 사양을 <br />파악하기 편리하도록
-      사이트를 구현하였습니다.`,
-      tbodyClient: "Raonsecure",
-      tbodyDate: "2019.11",
-      tbodyService: "Web / Mobile",
-      tbodyLaunch: "www.raoncorp.com",
-      responsiveWebImg: `../assets/images/pc/renewal13-01.jpg`,
-      pcDesignImg: `../assets/images/pc/renewal13-02.jpg`,
-      colorSystemImg1: `../assets/images/pc/renewal13-03.png`,
-      colorSystemImg2: `../assets/images/pc/renewal13-04.jpg`,
-      iconStyleImg: `../assets/images/pc/renewal13-05.jpg`,
-      prevId: "renewal12",
-    },
-    {
-      id: "renewal12",
-      title: `Sungjoofoundation
-      <br />wesite renewal`,
-      viewSub: "성주재단 리뉴얼",
-      infoboxText: `기업의 다양한 컨텐츠를 직관적으로 나타낼 수 있는 UI구성과
-      깔끔한 디자인으로 쉽게 컨텐츠를
-      <br />파악할 수 있도록 구현하였습니다. 또한 디바이스에
-      구애받지 않는 반응형 사이트로 어느 기기에서나 <br />쉽게
-      진입할 수 있도록 접근성을 높였습니다.`,
-      tbodyClient: "성주재단",
-      tbodyDate: "2019.10 ~ 2019.12",
-      tbodyService: "Web / Mobile",
-      tbodyLaunch: "www.sungjoofoundation.com",
-      responsiveWebImg: `../../assets/images/pc/renewal12-01.jpg`,
-      pcDesignImg: `../../assets/images/pc/renewal12-02.jpg`,
-      colorSystemImg1: `../../assets/images/pc/renewal12-03.jpg`,
-      colorSystemImg2: ``,
-      iconStyleImg: ``,
-      prevId: "renewal12",
-    },
-    {
-      id: "renewal11",
-      title: "test11",
-    },
-  ],
-  initPorts: 6, //한 phase에 노출할 데이터 수(초기 세팅 6)
-  addPorts: null,
-  toggleSmallList: false,
-  confirmLastLarge: false,
-  renewalNumber: "",
-  originNumber: "",
-  toName: "",
-};
-
-// getters
-const getters = {
-  totalPorts: (state) => {
-    return state.list.length;
-  },
-  initData: (state) => {
-    //console.log("mapGetters initData activated")
-    let goData = [];
-    for (let i = 0; i < state.initPorts; i++) {
-      goData.push(state.list[i]);
-    }
-    return goData;
-  },
-  moreData: (state) => {
-    let goData = [];
-    let calcValue = state.list.length - state.addPorts;
-    //console.log("vuex moreData's calcValue = ", calcValue);
-    if (calcValue > 6) {
-      for (let i = state.addPorts; i < state.addPorts + 6; i++) {
-        goData.push(state.list[i]);
-      }
-    } else {
-      for (let i = state.addPorts; i < state.addPorts + calcValue; i++) {
-        goData.push(state.list[i]);
-        state.confirmLastLarge = true;
-      }
-    }
-    return goData;
-  },
-  detailPorts: (state) => {
-    let findingId = state.renewalNumber;
-    //console.log("findingId : ", findingId);
-  },
-  togglePrev: (state) => {
-    let originId = state.originNumber;
-    console.log("vuex originId : ", originId);
-  },
-  fetch_list: (state) => {
-    state.list = list;
-    console.log("list updata", state.list);
-  },
-};
-
-// actions
-const actions = {};
-
-// mutations
-const mutations = {
-  setMoreData(state, data) {
-    state.addPorts = data;
-  },
-  setRenewalNumber(state, data) {
-    state.renewalNumber = data;
-    //console.log("state.renewalNumber : ", state.renewalNumber);
-  },
-  setOriginNumber(state, data) {
-    state.originNumber = data;
-  },
-};
-
-export default {
-  namespaced: true,
-  state,
-  getters,
-  actions,
-  mutations,
 };
