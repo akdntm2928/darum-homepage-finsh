@@ -2,8 +2,6 @@
 //각각의 포트폴리오 값들을 이곳에 넣는다.
 //DB를 쓰듯이 state를 이용하고
 //화면으로 뿌리는 것은 getter에서 연산을 통하도록 한다.
-import { listTest } from "../../mockup/portfolio";
-
 const state = {
   list: [
     {
@@ -38,7 +36,7 @@ const state = {
       renewalNumber: "renewal09",
       target: "renewal09",
       ment1: `선불요금제 가입회원대상 <br />간편한 충전 수단을
-              <br />제공합니다.`,
+      <br />제공합니다.`,
       ment2: "LG U+ 알뜰모바일 선불충전 APP",
       ment3: "UI / UX DESIGN",
     },
@@ -46,7 +44,7 @@ const state = {
       renewalNumber: "renewal08",
       target: "renewal08",
       ment1: `슈프리마의 브랜드 가치를 <br />세계로 전할 수 있는 <br />글로벌
-              파트너 사이트입니다.`,
+      파트너 사이트입니다.`,
       ment2: "슈프리마 Microwebsite SGPP 2019",
       ment3: "UI / UX DESIGN, DEVELOP",
     },
@@ -89,7 +87,7 @@ const state = {
       renewalNumber: "renewal02",
       target: "renewal02",
       ment1: `택배 서비스 부문 <br />
-              2년 연속 1위`,
+      2년 연속 1위`,
       ment2: "로젠택배 대표 홈페이지 개편",
       ment3: "UI / UX DESIGN",
     },
@@ -97,7 +95,7 @@ const state = {
       renewalNumber: "renewal01",
       target: "renewal01",
       ment1: `뛰어난 품질에 기반한 <br />
-              프리미엄 브랜드`,
+      프리미엄 브랜드`,
       ment2: "슈프리마 웹사이트 리뉴얼",
       ment3: "UI / UX DESIGN, DEVELOP",
     },
@@ -105,8 +103,8 @@ const state = {
       renewalNumber: "port-keit",
       target: "keit",
       ment1: `대한민국 기술의 <br />
-              프리미엄 시대 - <br />
-              KEIT가 열어갑니다.`,
+      프리미엄 시대 - <br />
+      KEIT가 열어갑니다.`,
       ment2: "한국기술평가관리원 리뉴얼",
       ment3: "UI / UX DESIGN, DEVELOP",
     },
@@ -114,7 +112,7 @@ const state = {
       renewalNumber: "port-teachinghub",
       target: "teachinghub",
       ment1: `티칭허브가 <br />
-              미래교실을 빛냅니다.`,
+      미래교실을 빛냅니다.`,
       ment2: "금성출판사 티칭허브 리뉴얼",
       ment3: "UI / UX DESIGN",
     },
@@ -122,7 +120,7 @@ const state = {
       renewalNumber: "port-koreacorp",
       target: "koreacorp",
       ment1: `차세대 <br />
-              어드민 시스템 구축`,
+      어드민 시스템 구축`,
       ment2: "한국코퍼레이션",
       ment3: "UI / UX DESIGN",
     },
@@ -130,8 +128,8 @@ const state = {
       renewalNumber: "port-mykids",
       target: "mykids",
       ment1: `삼성화재 마이키즈로 <br />
-              우리아이의 <br />
-              미래를 설계하세요.`,
+      우리아이의 <br />
+      미래를 설계하세요.`,
       ment2: "삼성화재 마이키즈 컨설팅 앱",
       ment3: "UI / UX DESIGN",
     },
@@ -139,7 +137,7 @@ const state = {
       renewalNumber: "port-nugu",
       target: "nugu",
       ment1: `국내최초 지능형 <br />
-              음성인식 디바이스`,
+      음성인식 디바이스`,
       ment2: "SKT NUGU 프로모션 사이트 구축",
       ment3: "UI / UX DESIGN",
     },
@@ -147,8 +145,8 @@ const state = {
       renewalNumber: "port-purunet",
       target: "purunet",
       ment1: `언제, 어디에서나 <br />
-              온라인 교과 공부는 <br />
-              푸르넷`,
+      온라인 교과 공부는 <br />
+      푸르넷`,
       ment2: "금성출판사 푸르넷 리뉴얼",
       ment3: "UI / UX DESIGN",
     },
@@ -194,10 +192,10 @@ const state = {
       ment2: "SKT T월드 다이렉트샵 웹/모바일 운영",
       ment3: "UI / UX DESIGN",
     },
-    // {
-    //   renewalNumber: "renewal00",
-    //   innerValue: "다름과 함께 다르게 커뮤니케이션",
-    // },
+    {
+      renewalNumber: "renewal00",
+      innerValue: "다름과 함께 다르게 커뮤니케이션",
+    },
   ],
   smallList: [
     {
@@ -210,7 +208,7 @@ const state = {
       className: "port-khidi",
       target: "khidi",
       ment1: `한국보건산업진흥원
-              <br />중동환자 관리 시스템 운영`,
+      <br />중동환자 관리 시스템 운영`,
       ment2: "MAINTENANCE",
     },
     {
@@ -247,7 +245,7 @@ const state = {
       className: "port-sinhyup",
       target: "port-sinhyup",
       ment1: `신협중앙회 모바일뱅킹
-              <br />APP 재구축`,
+      <br />APP 재구축`,
       ment2: "UI / UX DESIGN",
     },
     {
@@ -260,14 +258,14 @@ const state = {
       className: "port-11st",
       target: "11st",
       ment1: `11번가 브랜드
-              <br />PC웹 MOBILE웹 신규 구축`,
+      <br />PC웹 MOBILE웹 신규 구축`,
       ment2: "UI / UX DESIGN",
     },
     {
       className: "port-highway",
       target: "highway",
       ment1: `서울고속도로(하이패스)
-              <br />실시간 과금시스템 구축`,
+      <br />실시간 과금시스템 구축`,
       ment2: "UI / UX DESIGN",
     },
     {
@@ -371,11 +369,7 @@ const getters = {
   },
   togglePrev: (state) => {
     let originId = state.originNumber;
-    console.log("vuex originId : ", originId);
-  },
-  fetch_list: (state) => {
-    state.list = list;
-    console.log("list updata", state.list);
+    // console.log("vuex originId : ", originId);
   },
 };
 

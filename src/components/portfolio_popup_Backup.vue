@@ -122,13 +122,13 @@ export default {
       testData: null
     };
   },
-  mounted() {
-    if (this.popupList) {
-      this.testData = this.popupList[0];
-      let testValue = this.popupList.find(v => v.id === "renewal12");
-      // console.log("testValue ? ", testValue);
-    }
-  },
+  // mounted() {
+  //   if (this.popupList) {
+  //     this.testData = this.popupList[0];
+  //     let testValue = this.popupList.find(v => v.id === "renewal12");
+  //     // console.log("testValue ? ", testValue);
+  //   }
+  // },
   computed: {
     ...mapState({
       popupList: state => state.portfolio.portsPopupList

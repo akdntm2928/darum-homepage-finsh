@@ -258,7 +258,7 @@ export default {
   watch: {
     transName() {
       this.renewalName = this.transName;
-      console.log("하위컴포넌트에서 transName을 받았다. ", this.renewalName);
+      // console.log("하위컴포넌트에서 transName을 받았다. ", this.renewalName);
     }
   },
   mounted() {

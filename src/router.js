@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import PortPopup from "@/components/portfolio_popup.vue";
+// import PortPopup from "@/components/portfolio_popup.vue";
 
 Vue.use(Router);
 
@@ -62,10 +62,10 @@ export default new Router({
       component: MobileMain,
       meta: { hideHeader: true, Mobile: true },
     },
-    {
-      path: "/pc/port-popup",
-      name: "portPopup",
-      component: PortPopup,
-    },
+    // {
+    //   path: "/pc/port-popup",
+    //   name: "portPopup",
+    //   component: PortPopup,
+    // },
   ],
 });

@@ -113,9 +113,9 @@ export default {
     };
   },
   mounted() {
-    console.log("renewal07 is rendering");
+    // console.log("renewal07 is rendering");
   },
-  mounted(){
+  mounted() {
     $(".pop-portfolio").scrollTop(0, 0);
   },
   methods: {

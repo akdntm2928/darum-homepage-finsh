@@ -299,12 +299,12 @@ import portTworldCompo from "@/components/portfolio/port-tworld.vue";
 
 import confirmModal from "../../components/confirmModal.vue";
 import { mapState, mapGetters, mapMutations } from "vuex";
-import portPopup from "@/components/portfolio/port-popup.vue";
+// import portPopup from "@/components/portfolio/port-popup.vue";
 
 export default {
   components: {
     confirmModal,
-    "port-popup": portPopup,
+    // "port-popup": portPopup,
     renewal13Compo,
     renewal11Compo,
     renewal10Compo,

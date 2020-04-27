@@ -22,12 +22,12 @@ const _isMobile = () => {
 
 export default {
   components: {
-    "darum-header": darumHeader,
+    "darum-header": darumHeader
   },
   computed: {
     hideHeader() {
       return this.$route.meta.hideHeader;
-    },
+    }
   },
   data() {
     return {};
@@ -40,14 +40,10 @@ export default {
   updated() {},
   methods: {
     switchMobile() {
-      console.log(
-        "this.$browserDetect.meta.uaㅇㅇㅇ",
-        this.$browserDetect.meta.ua
-      );
       if (_isMobile(this.$browserDetect.meta.ua)) {
         this.$router.replace({ name: "MobileMain" });
       }
-    },
+    }
   },
   metaInfo: {
     /* link: [
@@ -131,7 +127,7 @@ export default {
         async:true,
         defer:true,
       }, */
-  },
+  }
 };
 </script>
 <style></style>
