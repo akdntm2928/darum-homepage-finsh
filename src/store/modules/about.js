@@ -90,7 +90,7 @@ const state = {
     },
     {
       memberName: `뉴티리아`,
-      memberTeam: `Developer Manager`,
+      memberTeam: `Publisher`,
       characterImage: "../../assets/images/pc/bg/members14.png",
     },
     {

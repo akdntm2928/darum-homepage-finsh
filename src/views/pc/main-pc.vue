@@ -13,7 +13,7 @@
               playsinline=""
               autoplay=""
               muted=""
-            >-->
+                    >-->
             <video
               id="myVideo"
               @ended="swNext()"
@@ -23,7 +23,10 @@
               autoplay
               muted
             >
-              <source src="../../../src/assets/images/darum-bg-movie.mp4" type="video/mp4" />
+              <source
+                src="../../../src/assets/images/darum-bg-movie.mp4"
+                type="video/mp4"
+              />
             </video>
             <div class="text-wrap">
               <div class="slogan">
@@ -32,37 +35,49 @@
                   swiper-animate-effect="fadeInUp"
                   swiper-animate-duration="0.5s"
                   swiper-animate-delay="0.2s"
-                >우 리 는</p>
+                >
+                  우 리 는
+                </p>
                 <p
                   class="ani"
                   swiper-animate-effect="fadeInUp"
                   swiper-animate-duration="0.5s"
                   swiper-animate-delay="0.4s"
-                >남 다 른 생 각 으 로</p>
+                >
+                  남 다 른 생 각 으 로
+                </p>
                 <p
                   class="ani"
                   swiper-animate-effect="fadeInUp"
                   swiper-animate-duration="0.5s"
                   swiper-animate-delay="0.6s"
-                >남 다 르 게</p>
+                >
+                  남 다 르 게
+                </p>
                 <p
                   class="ani"
                   swiper-animate-effect="fadeInUp"
                   swiper-animate-duration="0.5s"
                   swiper-animate-delay="0.8s"
-                >소 통 하 며</p>
+                >
+                  소 통 하 며
+                </p>
                 <p
                   class="ani"
                   swiper-animate-effect="fadeInUp"
                   swiper-animate-duration="0.5s"
                   swiper-animate-delay="1s"
-                >남 들 과 다 른</p>
+                >
+                  남 들 과 다 른
+                </p>
                 <p
                   class="ani"
                   swiper-animate-effect="fadeInUp"
                   swiper-animate-duration="0.5s"
                   swiper-animate-delay="1.2s"
-                >길 을 갑 니 다</p>
+                >
+                  길 을 갑 니 다
+                </p>
               </div>
             </div>
           </div>
@@ -132,7 +147,9 @@
                   swiper-animate-duration="0.5s"
                   swiper-animate-delay="0.4s"
                 >
-                  <router-link :to="{ name: 'PcAbout' }">다름을 소개합니다.</router-link>
+                  <router-link :to="{ name: 'PcAbout' }"
+                    >다름을 소개합니다.</router-link
+                  >
                 </li>
                 <li
                   class="main-second-menu-port ani"
@@ -140,7 +157,9 @@
                   swiper-animate-duration="0.5s"
                   swiper-animate-delay="0.4s"
                 >
-                  <router-link :to="{ name: 'PcPortfolio' }">다름을 경험하세요.</router-link>
+                  <router-link :to="{ name: 'PcPortfolio' }"
+                    >다름을 경험하세요.</router-link
+                  >
                 </li>
               </ul>
               <span
@@ -208,7 +227,7 @@ Pixi.prototype.init = function() {
     dispScale: 250,
     dispX: true,
     dispY: true,
-    count: 0
+    count: 0,
   };
 
   this.update();
@@ -303,7 +322,7 @@ import { mapMutations } from "vuex";
 export default {
   data() {
     return {
-      swipeVar: null
+      swipeVar: null,
     };
   },
   mounted() {
@@ -318,7 +337,7 @@ export default {
   },
   methods: {
     ...mapMutations({
-      setCloseHeaderBtn: "common/setCloseHeaderBtn"
+      setCloseHeaderBtn: "common/setCloseHeaderBtn",
     }),
 
     jqueryCodes() {
@@ -343,7 +362,7 @@ export default {
       const mySwiper = new Swiper(".swiper-container-main", {
         effect: "fade",
         fade: {
-          crossFade: true
+          crossFade: true,
         },
         mousewheelControl: true,
         onInit: function(swiper) {
@@ -352,7 +371,7 @@ export default {
         },
         onSlideChangeEnd: function(swiper) {
           swiperAnimate(swiper);
-        }
+        },
       });
       this.swipeVar = mySwiper;
     },
@@ -369,8 +388,8 @@ export default {
     }, */
     pageRefresh() {
       window.location.reload();
-    }
-  }
+    },
+  },
 };
 </script>
 

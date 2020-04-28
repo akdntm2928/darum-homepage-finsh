@@ -208,6 +208,7 @@ export default {
   },
   mounted() {},
   methods: {
+    //1 pcContact로 route하여 param값을 보내줌.
     toSupport() {
       if (this.$route.name != "PcContact") {
         this.$router.push({

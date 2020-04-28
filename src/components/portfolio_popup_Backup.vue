@@ -27,7 +27,9 @@
             viewBox="0 0 47 23"
             class="injected-svg inject-svg white-arrow"
           >
-            <path d="M47 0L24.52 22.52 25 23h-3l.48-.48L0 0h2.04L23.5 21.5 44.96 0H47z" />
+            <path
+              d="M47 0L24.52 22.52 25 23h-3l.48-.48L0 0h2.04L23.5 21.5 44.96 0H47z"
+            />
           </svg>
         </a>
       </div>
@@ -41,7 +43,9 @@
               </div>
               <div class="info-right">
                 <table>
-                  <caption>프로젝트 정보</caption>
+                  <caption>
+                    프로젝트 정보
+                  </caption>
                   <colgroup>
                     <col style="width: 64px;" />
                     <col style="width: auto;" />
@@ -119,7 +123,7 @@ export default {
   }, */
   data() {
     return {
-      testData: null
+      testData: null,
     };
   },
   // mounted() {
@@ -131,10 +135,10 @@ export default {
   // },
   computed: {
     ...mapState({
-      popupList: state => state.portfolio.portsPopupList
-    })
+      popupList: (state) => state.portfolio.portsPopupList,
+    }),
   },
-  methods: {}
+  methods: {},
 };
 </script>
 

@@ -192,10 +192,10 @@ const state = {
       ment2: "SKT T월드 다이렉트샵 웹/모바일 운영",
       ment3: "UI / UX DESIGN",
     },
-    {
-      renewalNumber: "renewal00",
-      innerValue: "다름과 함께 다르게 커뮤니케이션",
-    },
+    // {
+    //   renewalNumber: "renewal00",
+    //   innerValue: "다름과 함께 다르게 커뮤니케이션",
+    // },
   ],
   smallList: [
     {
@@ -332,6 +332,7 @@ const state = {
   renewalNumber: "",
   originNumber: "",
   toName: "",
+  renewalNameArray: [],
 };
 
 // getters
@@ -363,14 +364,6 @@ const getters = {
     }
     return goData;
   },
-  detailPorts: (state) => {
-    let findingId = state.renewalNumber;
-    //console.log("findingId : ", findingId);
-  },
-  togglePrev: (state) => {
-    let originId = state.originNumber;
-    // console.log("vuex originId : ", originId);
-  },
 };
 
 // actions
@@ -387,6 +380,13 @@ const mutations = {
   },
   setOriginNumber(state, data) {
     state.originNumber = data;
+  },
+  setRenewalName(state) {
+    console.log(state.renewalNameArray);
+    for (let i = 0; i < state.list.length; i++) {
+      state.renewalNameArray[i] = state.list[i].renewalNumber;
+    }
+    console.log(state.renewalNameArray);
   },
 };
 

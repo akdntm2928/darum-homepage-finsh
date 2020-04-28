@@ -115,187 +115,14 @@
       <button class="btn-popup-close close-pop-inside" @click="restoreCss()">
         <img src="../../assets/images/pc/btn/btn-popup-close.svg" alt="닫기" />
       </button>
-
-      <renewal13-compo
-        v-if="renewalName == 'renewal13'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <!-- <renewal12Compo
-        v-if="renewalName == 'renewal12'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />-->
-      <renewal11Compo
-        v-if="renewalName == 'renewal11'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <renewal10Compo
-        v-if="renewalName == 'renewal10'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <renewal09Compo
-        v-if="renewalName == 'renewal09'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <renewal08Compo
-        v-if="renewalName == 'renewal08'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <renewal07Compo
-        v-if="renewalName == 'renewal07'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <renewal06Compo
-        v-if="renewalName == 'renewal06'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <renewal05Compo
-        v-if="renewalName == 'renewal05'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <renewal04Compo
-        v-if="renewalName == 'renewal04'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <renewal03Compo
-        v-if="renewalName == 'renewal03'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <renewal02Compo
-        v-if="renewalName == 'renewal02'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <renewal01Compo
-        v-if="renewalName == 'renewal01'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <port-keit-compo
-        v-if="renewalName == 'port-keit'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <port-teachinghub-compo
-        v-if="renewalName == 'port-teachinghub'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <port-koreacorp-compo
-        v-if="renewalName == 'port-koreacorp'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <port-mykids-compo
-        v-if="renewalName == 'port-mykids'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <port-nugu-compo
-        v-if="renewalName == 'port-nugu'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <port-purunet-compo
-        v-if="renewalName == 'port-purunet'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <port-posco-compo
-        v-if="renewalName == 'port-posco'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <port-esellers-compo
-        v-if="renewalName == 'port-esellers'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <port-middleeast-compo
-        v-if="renewalName == 'port-middleeast'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <port-hyosung-compo
-        v-if="renewalName == 'port-hyosung'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <port-samsungpop-compo
-        v-if="renewalName == 'port-samsungpop'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
-      <port-tworld-compo
-        v-if="renewalName == 'port-tworld'"
-        v-on:prevId="toPrev"
-        v-on:nextId="toNext"
-        v-on:list="restoreCss"
-      />
+      <!-- 3.component import renew은 해당 임포트된 컴포넌트을 component태그에 is속성으로 넣어서 각 화면을 볼수있게한다. -->
+      <component :is="renew" v-on:prevId="toPrev" v-on:nextId="toNext" v-on:list="restoreCss"></component>
     </div>
   </div>
 </template>
 
 <script>
 import $ from "jquery";
-import renewal13Compo from "@/components/portfolio/renewal13.vue";
-import renewal11Compo from "@/components/portfolio/renewal11.vue";
-import renewal10Compo from "@/components/portfolio/renewal10.vue";
-import renewal09Compo from "@/components/portfolio/renewal09.vue";
-import renewal08Compo from "@/components/portfolio/renewal08.vue";
-import renewal07Compo from "@/components/portfolio/renewal07.vue";
-import renewal06Compo from "@/components/portfolio/renewal06.vue";
-import renewal05Compo from "@/components/portfolio/renewal05.vue";
-import renewal04Compo from "@/components/portfolio/renewal04.vue";
-import renewal03Compo from "@/components/portfolio/renewal03.vue";
-import renewal02Compo from "@/components/portfolio/renewal02.vue";
-import renewal01Compo from "@/components/portfolio/renewal01.vue";
-import portKeitCompo from "@/components/portfolio/port-keit.vue";
-import portTeachinghubCompo from "@/components/portfolio/port-teachinghub.vue";
-import portKoreacorpCompo from "@/components/portfolio/port-koreacorp.vue";
-import portMykidsCompo from "@/components/portfolio/port-mykids.vue";
-import portNuguCompo from "@/components/portfolio/port-nugu.vue";
-import portPurunetCompo from "@/components/portfolio/port-purunet.vue";
-import portPoscoCompo from "@/components/portfolio/port-posco.vue";
-import portEsellersCompo from "@/components/portfolio/port-esellers.vue";
-import portMiddleeastCompo from "@/components/portfolio/port-middleeast.vue";
-import portHyosungCompo from "@/components/portfolio/port-hyosung.vue";
-import portSamsungpopCompo from "@/components/portfolio/port-samsungpop.vue";
-import portTworldCompo from "@/components/portfolio/port-tworld.vue";
 
 import confirmModal from "../../components/confirmModal.vue";
 import { mapState, mapGetters, mapMutations } from "vuex";
@@ -303,33 +130,7 @@ import { mapState, mapGetters, mapMutations } from "vuex";
 
 export default {
   components: {
-    confirmModal,
-    // "port-popup": portPopup,
-    renewal13Compo,
-    renewal11Compo,
-    renewal10Compo,
-    renewal10Compo,
-    renewal09Compo,
-    renewal08Compo,
-    renewal07Compo,
-    renewal06Compo,
-    renewal05Compo,
-    renewal04Compo,
-    renewal03Compo,
-    renewal02Compo,
-    renewal01Compo,
-    "port-keit-compo": portKeitCompo,
-    "port-teachinghub-compo": portTeachinghubCompo,
-    "port-koreacorp-compo": portKoreacorpCompo,
-    "port-mykids-compo": portMykidsCompo,
-    "port-nugu-compo": portNuguCompo,
-    "port-purunet-compo": portPurunetCompo,
-    "port-posco-compo": portPoscoCompo,
-    "port-esellers-compo": portEsellersCompo,
-    "port-middleeast-compo": portMiddleeastCompo,
-    "port-hyosung-compo": portHyosungCompo,
-    "port-samsungpop-compo": portSamsungpopCompo,
-    "port-tworld-compo": portTworldCompo
+    confirmModal
   },
   data() {
     return {
@@ -341,8 +142,7 @@ export default {
       btnHide: false,
       modal: false,
       renewalName: "",
-      toName: "",
-      nameArray: [
+      renewalArray: [
         "renewal13",
         "renewal11",
         "renewal10",
@@ -367,7 +167,8 @@ export default {
         "port-hyosung",
         "port-samsungpop",
         "port-tworld"
-      ]
+      ],
+      toName: ""
     };
   },
   beforeMount() {
@@ -399,7 +200,11 @@ export default {
       smallData: state => state.portfolio.smallList,
       toggleSmallList: state => state.portfolio.toggleSmallList,
       stateRenewalNumber: state => state.portfolio.renewalNumber,
-      stateOriginNumber: state => state.portfolio.originNumber
+      stateOriginNumber: state => state.portfolio.originNumber,
+      renewalNameArray: state => state.portfolio.renewalNameArray
+    }),
+    ...mapMutations({
+      setRenewalName: "portfolio/setRenewalName"
     }),
     ...mapGetters({
       initData: "portfolio/initData",
@@ -407,7 +212,13 @@ export default {
       totalPorts: "portfolio/totalPorts",
       detailPorts: "portfolio/detailPorts",
       togglePrev: "portfolio/togglePrev"
-    })
+    }),
+    renew() {
+      // .2 component import renewalName값에 바뀌는 순가 computed의 속성으로 종속된값을 바뀌 해당 컴포넌을 불를수있게한다.
+      return this.renewalName
+        ? () => import(`@/components/portfolio/${this.renewalName}`)
+        : null;
+    }
   },
   methods: {
     ...mapMutations({
@@ -428,16 +239,11 @@ export default {
       document.querySelector(".sub-header").style.overflow = "auto";
     },
     activatePopup(renewalValue) {
-      if (this.renewalName == renewalValue) {
-        this.renewalName = "";
-        this.$forceUpdate();
-        this.$nextTick(() => {
-          this.renewalName = renewalValue;
-          //console.log("1번째 경우, this.renewalName : ", this.renewalName);
-        });
-      } else {
+      // 1. component import renwalname을 종속성있게 하기위해 data에 넣어 값을 넣어준다.
+      if (this.renewalName == null || this.renewalName != renewalValue) {
         this.renewalName = renewalValue;
-        //console.log("2번째 경우, this.renewalName : ", this.renewalName);
+      } else if (this.renewalName === renewalValue) {
+        this.renewalName = null;
       }
       document.querySelector(".sub-header").style.height = "100vh";
       document.querySelector(".sub-header").style.overflow = "hidden";
@@ -466,9 +272,9 @@ export default {
     },
     toPrev(id) {
       const findIndexNumber = e => e == id;
-      let v = this.nameArray.findIndex(findIndexNumber);
-      if (this.nameArray[v + 1]) {
-        this.renewalName = this.nameArray[v + 1];
+      let v = this.renewalArray.findIndex(findIndexNumber);
+      if (this.renewalArray[v + 1]) {
+        this.renewalName = this.renewalArray[v + 1];
       } else {
         this.renewalName = id;
         alert("처음 페이지입니다.");
@@ -477,9 +283,9 @@ export default {
     },
     toNext(id) {
       const findIndexNumber = e => e == id;
-      let v = this.nameArray.findIndex(findIndexNumber);
-      if (this.nameArray[v - 1]) {
-        this.renewalName = this.nameArray[v - 1];
+      let v = this.renewalArray.findIndex(findIndexNumber);
+      if (this.renewalArray[v - 1]) {
+        this.renewalName = this.renewalArray[v - 1];
       } else {
         alert("마지막 페이지입니다.");
         return false;

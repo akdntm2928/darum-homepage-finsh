@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <darum-header v-if="!hideHeader" />
     <router-view />
   </div>
@@ -7,7 +7,6 @@
 
 <script>
 import darumHeader from "./components/darum-header.vue";
-
 const _isMobile = () => {
   if (
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -19,15 +18,14 @@ const _isMobile = () => {
     return false;
   }
 };
-
 export default {
   components: {
-    "darum-header": darumHeader
+    "darum-header": darumHeader,
   },
   computed: {
     hideHeader() {
       return this.$route.meta.hideHeader;
-    }
+    },
   },
   data() {
     return {};
@@ -43,7 +41,7 @@ export default {
       if (_isMobile(this.$browserDetect.meta.ua)) {
         this.$router.replace({ name: "MobileMain" });
       }
-    }
+    },
   },
   metaInfo: {
     /* link: [
@@ -127,7 +125,7 @@ export default {
         async:true,
         defer:true,
       }, */
-  }
+  },
 };
 </script>
 <style></style>
